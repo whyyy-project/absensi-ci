@@ -43,6 +43,12 @@ $routes->get('/data_guru', 'Admin::guru');
 $routes->get('/data_siswa', 'Admin::siswa');
 
 
+// API
+$routes->get('api/siswa/(:segment)', 'ApiSiswa::data_siswa/$1');
+
+
+
+
 
 
 /*
