@@ -6,7 +6,7 @@ use CodeIgniter\RESTful\ResourceController;
 use App\Models\ApiModel;
 use CodeIgniter\API\ResponseTrait;
 
-class ApiSiswa extends ResourceController
+class ApiSiswaController extends ResourceController
 {
     use ResponseTrait;
 

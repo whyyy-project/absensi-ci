@@ -8,6 +8,6 @@ class Pages extends BaseController
 {
     public function index()
     {
-        return view('cover');
+        return view('public/cover');
     }
 }

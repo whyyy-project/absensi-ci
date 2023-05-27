@@ -44,7 +44,7 @@ $routes->get('/data_siswa', 'Admin::siswa');
 
 
 // API
-$routes->get('api/siswa/(:segment)', 'ApiSiswa::data_siswa/$1');
+$routes->get('api/siswa/(:segment)', 'ApiSiswaController::data_siswa/$1');
 
 
 
