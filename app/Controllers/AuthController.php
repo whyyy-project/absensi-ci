@@ -4,10 +4,10 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class Pages extends BaseController
+class AuthController extends BaseController
 {
     public function index()
     {
-        return view('public/cover');
+        //
     }
 }

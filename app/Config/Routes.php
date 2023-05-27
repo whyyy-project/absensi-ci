@@ -30,17 +30,19 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
+// ruotes public
+$routes->get('/', 'PagesController::index');
+$routes->get('/scan', 'PagesController::scan');
+
 // routes Guru
-$routes->get('/', 'Pages::index');
-$routes->get('/guru', 'Guru::index');
-$routes->get('/wali_kelas', 'Guru::wali');
+$routes->get('/guru', 'GuruController::index');
+$routes->get('/wali_kelas', 'GuruController::wali');
 
 // routes Admin
-$routes->get('/', 'Pages::index');
-$routes->get('/admin', 'Admin::index');
-$routes->get('/data_kelas', 'Admin::kelas');
-$routes->get('/data_guru', 'Admin::guru');
-$routes->get('/data_siswa', 'Admin::siswa');
+$routes->get('/admin', 'AdminController::index');
+$routes->get('/data_kelas', 'AdminController::kelas');
+$routes->get('/data_guru', 'AdminController::guru');
+$routes->get('/data_siswa', 'AdminController::siswa');
 
 
 // API

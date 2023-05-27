@@ -13,7 +13,7 @@
     <meta name="author" content="" />
 
     <title>
-        Cover
+        Welcome | Absensi App
     </title>
 
     <!-- slider stylesheet -->
@@ -52,7 +52,8 @@
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg custom_nav-container">
                     <a class="navbar-brand" href="./">
-                        <img loading="lazy" src="<?= base_URL(); ?>images/cover/logo-cover.png" width="150px" alt="logo" />
+                        <img loading="lazy" src="<?= base_URL(); ?>images/cover/logo-cover.png" width="150px"
+                            alt="logo" />
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -110,7 +111,7 @@
         <!-- slider section -->
         <section class="slider_section ">
             <div class="play_btn">
-                <a href="?hlm=scan">
+                <a href="scan">
                     <img loading="lazy" src="<?= base_URL(); ?>assets/images/play.png" alt="">
                 </a>
             </div>
@@ -358,8 +359,8 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>assets/images/telat1.jpg" style="width: 300px; "
-                                            alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>assets/images/telat1.jpg"
+                                            style="width: 300px; " alt="">
                                     </div>
                                 </div>
                             </div>
@@ -368,8 +369,8 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>assets/images/telat2.jpg" style="width: 300px;"
-                                            alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>assets/images/telat2.jpg"
+                                            style="width: 300px;" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -379,8 +380,8 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>assets/images/telat3.jpg" style="width: 300px;"
-                                            alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>assets/images/telat3.jpg"
+                                            style="width: 300px;" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -389,8 +390,8 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>assets/images/telat4.jpg" style="width: 300px;"
-                                            alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>assets/images/telat4.jpg"
+                                            style="width: 300px;" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -574,7 +575,8 @@
                         </h5>
                         <div>
                             <div class="img-box">
-                                <img loading="lazy" src="<?= base_URL(); ?>assets/images/location-white.png" width="18px" alt="">
+                                <img loading="lazy" src="<?= base_URL(); ?>assets/images/location-white.png"
+                                    width="18px" alt="">
                             </div>
                             <p>
                                 Address
@@ -582,7 +584,8 @@
                         </div>
                         <div>
                             <div class="img-box">
-                                <img loading="lazy" src="<?= base_URL(); ?>assets/images/telephone-white.png" width="12px" alt="">
+                                <img loading="lazy" src="<?= base_URL(); ?>assets/images/telephone-white.png"
+                                    width="12px" alt="">
                             </div>
                             <p>
                                 +01 1234567890
@@ -590,7 +593,8 @@
                         </div>
                         <div>
                             <div class="img-box">
-                                <img loading="lazy" src="<?= base_URL(); ?>assets/images/envelope-white.png" width="18px" alt="">
+                                <img loading="lazy" src="<?= base_URL(); ?>assets/images/envelope-white.png"
+                                    width="18px" alt="">
                             </div>
                             <p>
                                 demo@gmail.com
