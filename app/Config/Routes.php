@@ -33,6 +33,7 @@ $routes->set404Override();
 // ruotes public
 $routes->get('/', 'PagesController::index');
 $routes->get('/scan', 'PagesController::scan');
+$routes->get('/hasil', 'PagesController::hasilScan');
 
 // routes Guru
 $routes->get('/guru', 'GuruController::index');

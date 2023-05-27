@@ -14,4 +14,8 @@ class PagesController extends BaseController
     {
         return view('public/scan');
     }
+    public function hasilScan()
+    {
+        return view('public/hasilScan');
+    }
 }
