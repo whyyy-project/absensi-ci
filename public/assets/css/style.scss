@@ -2,16 +2,13 @@ $white: #ffffff;
 $black: #252525;
 $primary1: #24d278;
 
-
 @mixin main-font {
-  font-family: 'Open Sans', sans-serif;
-
+  font-family: "Open Sans", sans-serif;
 }
 
 @mixin second-font {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-
 
 @mixin hero_btn($col1, $col2, $pad1, $pad2, $bRadius) {
   display: inline-block;
@@ -69,12 +66,10 @@ body {
 .heading_container {
   display: flex;
 
-
   h2 {
     color: $black;
     position: relative;
     @include second-font();
-
 
     &::before {
       content: "";
@@ -86,7 +81,6 @@ body {
       background-color: $primary1;
       transform: translate(100%, -50%);
     }
-
   }
 }
 
@@ -116,8 +110,6 @@ body {
     height: auto;
     background-size: auto;
   }
-
-
 }
 
 .hero_area.sub_pages {
@@ -253,8 +245,6 @@ a:focus {
   &:focus {
     outline: none;
   }
-
-
 }
 
 .login_btn-container {
@@ -309,8 +299,6 @@ a:focus {
   }
 
   .detail-box {
-
-
     h1 {
       color: $primary1;
       text-transform: uppercase;
@@ -418,10 +406,8 @@ a:focus {
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
         opacity: 1;
       }
-
     }
   }
-
 
   .carousel-indicators {
     margin: 0;
@@ -466,13 +452,10 @@ a:focus {
         }
       }
     }
-
   }
 }
 
 // end slider section
-
-
 
 // about section
 .about_section {
@@ -481,7 +464,6 @@ a:focus {
   }
 
   .detail-box {
-
     p {
       margin-top: 20px;
     }
@@ -493,7 +475,6 @@ a:focus {
   }
 
   .img-box {
-
     img {
       width: 100%;
     }
@@ -562,10 +543,7 @@ a:focus {
         padding-top: 35px;
       }
     }
-
-
   }
-
 }
 
 // end trending section
@@ -596,12 +574,10 @@ a:focus {
     a {
       @include hero_btn($black, $white, 6px, 30px, 20px);
       margin-top: 25px;
-
     }
   }
 
   .img-box {
-
     img {
       width: 100%;
     }
@@ -626,7 +602,7 @@ a:focus {
       padding: 75px 35px 10px 35px;
       margin: 30px 10px 0 10px;
       min-width: 225px;
-      flex: 0 0 23.24670%;
+      flex: 0 0 23.2467%;
 
       h6 {
         color: $black;
@@ -743,7 +719,6 @@ a:focus {
 .client_section {
   .custom_heading-container {
     justify-content: center;
-
   }
 
   .client_container {
@@ -752,18 +727,16 @@ a:focus {
   }
 
   .client_box {
-
     margin-left: 25px;
     margin-right: 25px;
     padding: 25px;
-    box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.1);
 
     .client-id {
       display: flex;
       align-items: center;
 
       .img-box {
-
         img {
           width: 100%;
         }
@@ -803,15 +776,10 @@ a:focus {
       background-size: 25px;
       background-repeat: no-repeat;
     }
-
-
   }
-
-
 }
 
 // end client_section
-
 
 // info section
 .info_section {
@@ -838,9 +806,8 @@ a:focus {
   }
 
   .info_insta {
-
     .insta_container {
-      &>div {
+      & > div {
         display: flex;
       }
 
@@ -852,10 +819,7 @@ a:focus {
         margin: 5px;
         display: flex;
         align-items: stretch;
-
       }
-
-
     }
   }
 
@@ -870,7 +834,7 @@ a:focus {
       margin: 0;
     }
 
-    >div {
+    > div {
       display: flex;
       align-items: center;
       margin: 20px 0;
@@ -908,14 +872,9 @@ a:focus {
       }
     }
   }
-
 }
 
-
-
-
 // end info section
-
 
 /* footer section*/
 
@@ -932,7 +891,6 @@ a:focus {
   padding: 25px 0 20px 0;
   margin: 0 auto;
   text-align: center;
-
 }
 
 .footer_section a {
