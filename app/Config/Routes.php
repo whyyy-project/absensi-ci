@@ -35,6 +35,11 @@ $routes->get('/', 'PagesController::index');
 $routes->get('/scan', 'PagesController::scan');
 $routes->get('/hasil', 'PagesController::hasilScan');
 
+$routes->add('login', 'AuthController::login');
+$routes->add('register', 'AuthController::register');
+$routes->add('forgot', 'AuthController::forgotPassword');
+
+
 // routes Guru
 $routes->get('/guru', 'GuruController::index');
 $routes->get('/wali_kelas', 'GuruController::wali');

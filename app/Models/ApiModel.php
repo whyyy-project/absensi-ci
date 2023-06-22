@@ -12,9 +12,7 @@ class ApiModel extends Model
 
     public function getSiswaData()
     {
-        return $this->select('tb_siswa.uuid, tb_siswa.nama_siswa, tb_siswa.nisn, tb_kelas.nama_kelas, kariyawan.nama_kariyawan')
-            ->join('tb_kelas', 'tb_siswa.id_kelas = tb_kelas.id_kelas', 'left')
-            ->join('kariyawan', 'tb_kelas.id_kariyawan = kariyawan.id_kariyawan', 'left')
+        return $this->select('tb_siswa.uuid, tb_siswa.nama_siswa')
             ->findAll();
     }
 }

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
@@ -19,7 +20,6 @@ class ApiSiswaController extends ResourceController
             'message' => 'API Key Salah!'
         ];
 
-
         if ($this->validateApiKey($apiKey)) {
             $model = new ApiModel();
             $siswaData = $model->getSiswaData();
@@ -31,7 +31,6 @@ class ApiSiswaController extends ResourceController
             }
         } else {
             return view('errors/html/error_404', $data);
-
         }
     }
 
