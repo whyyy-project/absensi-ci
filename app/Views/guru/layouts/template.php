@@ -23,6 +23,7 @@
 
     <!-- icon -->
     <link rel="shortcut icon" href="<?= base_URL(); ?>assets/favicon.ico">
+
 </head>
 
 <body id="page-top">
@@ -31,7 +32,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_URL(); ?>index.html">
@@ -61,11 +62,16 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_URL();?>wali_kelas">
+                <a class="nav-link" href="<?= base_URL();?>siswa">
                     <i class="fas fa-fw fa-user"></i>
-                    <span>Wali Kelas</span></a>
+                    <span>Data Siswa</span></a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_URL();?>rekap">
+                    <i class="fas fa-fw fa-clipboard-list"></i>
+                    <span>Rekap Absensi</span></a>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -103,7 +109,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Wali Kelas</span>
                                 <img class="img-profile rounded-circle"
-                                    src="<?= base_URL(); ?>img/undraw_profile.svg">
+                                    src="<?= base_URL(); ?>assets/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

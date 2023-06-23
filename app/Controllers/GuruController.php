@@ -13,11 +13,19 @@ class GuruController extends BaseController
         ];
         return view('guru/pages/dashboard', $data);
     }
-    public function wali()
+    public function Siswa()
     {
         $data = [
-            'title' => 'Guru | Wali Kelas'
+            'title' => 'Guru | Data Siswa'
         ];
-        return view('guru/pages/wali_kelas', $data);
+        return view('guru/pages/data_siswa', $data);
+    }
+
+    public function Rekap()
+    {
+        $data = [
+            'title' => 'Guru | Rekap Absensi'
+        ];
+        return view('guru/pages/rekap', $data);
     }
 }

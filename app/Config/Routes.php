@@ -42,7 +42,8 @@ $routes->add('forgot', 'AuthController::forgotPassword');
 
 // routes Guru
 $routes->get('/guru', 'GuruController::index');
-$routes->get('/wali_kelas', 'GuruController::wali');
+$routes->get('/siswa', 'GuruController::Siswa');
+$routes->get('/rekap', 'GuruController::Rekap');
 
 // routes Admin
 $routes->get('/admin', 'AdminController::index');
