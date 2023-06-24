@@ -47,9 +47,9 @@ $routes->get('/rekap', 'GuruController::Rekap');
 
 // routes Admin
 $routes->get('/admin', 'AdminController::index');
-$routes->get('/data_kelas', 'AdminController::kelas');
-$routes->get('/data_guru', 'AdminController::guru');
-$routes->get('/data_siswa', 'AdminController::siswa');
+$routes->get('/kelas', 'AdminController::kelas');
+$routes->get('/data_guru', 'AdminController::data_guru');
+$routes->get('/data_siswa', 'AdminController::data_siswa');
 
 
 // API

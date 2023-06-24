@@ -20,14 +20,14 @@ class AdminController extends BaseController
         ];
         return view('admin/pages/data_kelas', $data);
     }
-    public function guru()
+    public function data_guru()
     {
         $data = [
             'title' => 'Admin | Data Guru'
         ];
         return view('admin/pages/data_guru', $data);
     }
-    public function siswa()
+    public function data_siswa()
     {
         $data = [
             'title' => 'Admin | Data Siswa'
