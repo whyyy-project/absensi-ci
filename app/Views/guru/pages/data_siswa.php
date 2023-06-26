@@ -109,8 +109,6 @@
                             <div class="dropdown-header">Opsi :</div>
                             <a class="dropdown-item" href="#">Refresh</a>
                             <a class="dropdown-item" href="#">Download</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </div>
                 </div>

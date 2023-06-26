@@ -7,8 +7,7 @@
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Rekap Absensi</h1>
-        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                class="fas fa-download fa-sm text-white-50"></i> Download Absensi</a>
+
     </div>
     <!-- end page heading -->
 
@@ -31,8 +30,6 @@
                             <div class="dropdown-header">Opsi :</div>
                             <a class="dropdown-item" href="#">Refresh</a>
                             <a class="dropdown-item" href="#">Download</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </div>
                 </div>

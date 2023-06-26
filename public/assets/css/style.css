@@ -592,6 +592,8 @@ a:focus {
 
 .trending_section .img_container .box .img-box img {
   width: 100%;
+  border-radius: 5%;
+  filter: drop-shadow(0 0 10px rgba(119, 117, 117, 0.5));
 }
 
 .trending_section .img_container .box.b-1 {
@@ -805,10 +807,12 @@ a:focus {
 .contact_section .map_container {
   height: 100%;
   padding-bottom: 110px;
+
 }
 
 .contact_section .map_container .map-responsive {
   height: 100%;
+
 }
 
 .client_section .custom_heading-container {
@@ -1079,3 +1083,92 @@ a:focus {
   transform: rotate(-45deg) translate(7px, -10px);
 }
 /*# sourceMappingURL=style.css.map */
+
+/* cari siswa */
+/* Gaya umum */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Gaya formulir pencarian */
+.search-form {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.search-form input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  color: #333;
+  font-size: 16px;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.search-form input[type="text"]:focus {
+  background-color: #e0e0e0;
+}
+
+.search-form input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.search-form input[type="submit"]:hover {
+  background-color: #555;
+}
+
+
+/* Gaya tabel data siswa */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: rgb(0, 179, 0);
+  color: #fff;
+}
+
+table td {
+  border-bottom: 1px solid #ccc;
+}
+
+/* Gaya pesan jika data siswa tidak ditemukan */
+.data-not-found {
+  text-align: center;
+  color: #333;
+  font-size: 18px;
+  margin-top: 30px;
+}
