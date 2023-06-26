@@ -140,7 +140,7 @@ if (isset($_POST['submit'])) {
                                 <tr>
                                     <th>1</th>
                                     <th>Subagio</th>
-                                    <th>
+                                    <th> 
                                         <div class="dropdown">
                                             <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-selected="H">
                                                 H

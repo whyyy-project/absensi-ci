@@ -236,6 +236,56 @@
         </section>
         <!-- end slider section -->
     </div>
+   <!-- Section cari siswa -->
+<section class="about_section layout_padding">
+    <div class="container">
+        <h2 style="text-align: center;">Pencarian Data Siswa</h2>
+        <form method="GET" action="" class="search-form">
+            <input type="text" name="keyword" placeholder="Masukkan kata kunci pencarian">
+            <input type="submit" value="Cari">
+        </form>
+        <?php
+        // Data siswa
+        $siswa = array(
+            array('No' => '1', 'Nama' => 'John Doe', 'Kelas' => 'XII A', 'Absen' => 'H,I,S,T', 'Tanggal Absen' => '2023-06-01'),
+            array('No' => '2', 'Nama' => 'Jane Smith', 'Kelas' => 'XI B', 'Absen' => 'H,I,S,T', 'Tanggal Absen' => '2023-06-02'),
+            array('No' => '3', 'Nama' => 'David Williams', 'Kelas' => 'X A', 'Absen' => 'H,I,S,T', 'Tanggal Absen' => '2023-06-03')
+        );
+
+        // Cek apakah terdapat kata kunci pencarian
+        if (isset($_GET['keyword'])) {
+            $keyword = $_GET['keyword'];
+
+            // Filter data siswa berdasarkan kata kunci
+            $filtered_siswa = array_filter($siswa, function ($item) use ($keyword) {
+                return (stripos($item['No'], $keyword) !== false) ||
+                    (stripos($item['Nama'], $keyword) !== false) ||
+                    (stripos($item['Kelas'], $keyword) !== false) ||
+                    (stripos($item['Absen'], $keyword) !== false) ||
+                    (stripos($item['Tanggal Absen'], $keyword) !== false);
+            });
+
+            // Tampilkan data siswa yang terfilter
+            if (!empty($filtered_siswa)) {
+                echo '<table>';
+                echo '<tr><th>No</th><th>Nama</th><th>Kelas</th><th>Absen</th><th>Tanggal Absen</th></tr>';
+                foreach ($filtered_siswa as $siswa) {
+                    echo '<tr>';
+                    echo '<td>' . $siswa['No'] . '</td>';
+                    echo '<td>' . $siswa['Nama'] . '</td>';
+                    echo '<td>' . $siswa['Kelas'] . '</td>';
+                    echo '<td>' . substr($siswa['Absen'], 0, 1) . '</td>';
+                    echo '<td>' . $siswa['Tanggal Absen'] . '</td>';
+                    echo '</tr>';
+                }
+                echo '</table>';
+            } else {
+                echo 'Data siswa tidak ditemukan.';
+            }
+        }
+        ?>
+    </div>
+</section>
 
 
     <!-- about section -->
@@ -271,7 +321,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="img-box">
-                        <img loading="lazy" src="<?= base_URL(); ?>images/cover/tentang.jpg" alt="">
+                        <img loading="lazy" src="<?= base_URL(); ?>images/cover/tentang.jpeg" alt="">
                     </div>
                 </div>
             </div>
@@ -406,108 +456,6 @@
 
     <!-- end trending section -->
 
-    <!-- discount section -->
-
-    <section class="discount_section  layout_padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="detail-box">
-                        <h2>
-                            The Latest Collection
-                        </h2>
-                        <h2 class="main_heading">
-                            50% DISCOUNT
-                        </h2>
-
-                        <div class="">
-                            <a href="">
-                                Buy Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="img-box">
-                        <img src="<?= base_URL(); ?>assets/images/discount-img.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- end discount section -->
-
-    <!-- brand section -->
-
-    <section class="brand_section">
-        <div class="container">
-            <div class="heading_container text-center">
-                <h2>
-                    Top 4 Siswa Terpagi
-                    <p>30 hari terakhir</p>
-                </h2>
-            </div>
-            <div class="brand_container layout_padding2">
-                <div class="box">
-                    <a href="">
-                        <div class="new">
-                            <h5>
-                                Best!
-                            </h5>
-                        </div>
-                        <div class="img-box">
-                            <img loading="lazy" src="<?= base_URL(); ?>assets/images/telat1.jpg" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h6>
-                                Yoga
-                            </h6>
-                        </div>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="">
-                        <div class="img-box">
-                            <img loading="lazy" src="<?= base_URL(); ?>assets/images/telat2.jpg" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h6>
-                                Rina
-                            </h6>
-                        </div>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="">
-                        <div class="img-box">
-                            <img loading="lazy" src="<?= base_URL(); ?>assets/images/telat3.jpg" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h6>
-                                Yogi
-                            </h6>
-                        </div>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="">
-                        <div class="img-box">
-                            <img loading="lazy" src="<?= base_URL(); ?>assets/images/telat4.jpg" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h6>
-                                Rani
-                            </h6>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- end brand section -->
     <!-- contact section -->
 
     <section class="contact_section layout_padding">
@@ -522,33 +470,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <form action="">
-                        <div>
-                            <input type="text" placeholder="Nama" />
-                        </div>
-                        <div>
-                            <input type="email" placeholder="Email" />
-                        </div>
-                        <div>
-                            <input type="text" placeholder="No Telepon" />
-                        </div>
-                        <div>
-                            <input type="text" class="message-box" placeholder="Tulis Pesan" />
-                        </div>
-                        <div class="d-flex ">
-                            <button>
-                                KIRIM
-                            </button>
-                        </div>
-                    </form>
+                <form method="post" action="proses_form.php">
+                <!-- Isi form di sini -->
+                    <div>
+                        <input type="text" placeholder="Nama" name="nama" required />
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Email" name="email" required />
+                    </div>
+                    <div>
+                        <input type="text" placeholder="No Telepon" name="no_telepon" required />
+                    </div>
+                    <div>
+                        <input type="text" class="message-box" placeholder="Tulis Pesan" />
+                    </div>
+                    <div class="d-flex">
+                        <button type="submit" name="submit">KIRIM</button>
+                    </div>
+            </form>
                 </div>
                 <div class="col-md-6">
                     <div class="map_container">
                         <div class="map-responsive">
-                            <iframe
-                                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France"
-                                width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%"
-                                allowfullscreen></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.8291865534916!2d111.92140207424845!3d-7.260272271328159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e782b12c820314d%3A0x9ed7d5c71ba0009e!2sMA%20Al-Abror%20Sukosewu!5e0!3m2!1sid!2sid!4v1687599301770!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
@@ -568,10 +512,10 @@
             </div>
             <div class="row">
 
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="info_contact">
                         <h5>
-                            About Us
+                            Tentang Kami
                         </h5>
                         <div>
                             <div class="img-box">
@@ -579,7 +523,7 @@
                                     width="18px" alt="">
                             </div>
                             <p>
-                                Address
+                                Jl Raya Sukosewu No. 147 
                             </p>
                         </div>
                         <div>
@@ -588,7 +532,7 @@
                                     width="12px" alt="">
                             </div>
                             <p>
-                                +01 1234567890
+                            0822-4749-2922
                             </p>
                         </div>
                         <div>
@@ -597,91 +541,36 @@
                                     width="18px" alt="">
                             </div>
                             <p>
-                                demo@gmail.com
+                            maalabrorsukosewu00@gmail.com
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="info_info">
                         <h5>
-                            Informations
+                            Informasi
                         </h5>
                         <p>
-                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            Adalah salah satu satuan pendidikan dengan jenjang MA di Sukosewu, Kec. Sukosewu, Kab. Bojonegoro, Jawa Timur. Dalam menjalankan kegiatannya, MAS AL ABROR berada di bawah naungan Kementerian Agama.
                         </p>
                     </div>
                 </div>
-
-                <div class="col-md-3">
-                    <div class="info_insta">
-                        <h5>
-                            Instagram
-                        </h5>
-                        <div class="insta_container">
-                            <div>
-                                <a href="">
-                                    <div class="insta-box b-1">
-                                        <img loading="lazy" src="<?= base_URL(); ?>assets/images/i-1.jpg" alt="">
-                                    </div>
-                                </a>
-                                <a href="">
-                                    <div class="insta-box b-2">
-                                        <img loading="lazy" src="<?= base_URL(); ?>assets/images/i-2.jpg" alt="">
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div>
-                                <a href="">
-                                    <div class="insta-box b-3">
-                                        <img loading="lazy" src="<?= base_URL(); ?>assets/images/i-3.jpg" alt="">
-                                    </div>
-                                </a>
-                                <a href="">
-                                    <div class="insta-box b-4">
-                                        <img loading="lazy" src="<?= base_URL(); ?>assets/images/i-4.jpg" alt="">
-                                    </div>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <div class="insta-box b-3">
-                                        <img loading="lazy" src="<?= base_URL(); ?>assets/images/i-5.jpg" alt="">
-                                    </div>
-                                </a>
-                                <a href="">
-                                    <div class="insta-box b-4">
-                                        <img loading="lazy" src="<?= base_URL(); ?>assets/images/i-6.jpg" alt="">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="info_form ">
                         <h5>
-                            Newsletter
+                            Sosial Media
                         </h5>
-                        <form action="">
-                            <input type="email" placeholder="Enter your email">
-                            <button>
-                                Subscribe
-                            </button>
-                        </form>
+
                         <div class="social_box">
-                            <a href="">
-                                <img loading="lazy" src="<?= base_URL(); ?>assets/images/fb.png" alt="">
+                            <a href="https://www.instagram.com/malabrortv/?hl=id">
+                                <img loading="lazy" src="<?= base_URL(); ?>assets/images/instagram.png" alt="malabrortv">
                             </a>
-                            <a href="">
-                                <img loading="lazy" src="<?= base_URL(); ?>assets/images/twitter.png" alt="">
+                            <a href="https://www.tiktok.com/@malabrortv?_t=8dQoJthbEYs&_r=1">
+                                <img loading="lazy" src="<?= base_URL(); ?>assets/images/tiktok.png" alt="@malabrortv">
                             </a>
-                            <a href="">
-                                <img loading="lazy" src="<?= base_URL(); ?>assets/images/linkedin.png" alt="">
-                            </a>
-                            <a href="">
-                                <img loading="lazy" src="<?= base_URL(); ?>assets/images/youtube.png" alt="">
+                            <a href="https://www.youtube.com/@malabror_tv">
+                                <img loading="lazy" src="<?= base_URL(); ?>assets/images/youtube.png" alt="malabror_tv">
                             </a>
                         </div>
                     </div>
