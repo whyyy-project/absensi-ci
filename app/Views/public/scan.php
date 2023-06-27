@@ -44,6 +44,14 @@
             background-position: center;
             background-size: cover;
         }
+
+        img.lazy {
+            opacity: 0;
+        }
+
+        img.lazy.loaded {
+            opacity: 1;
+        }
     </style>
 
 </head>
@@ -51,56 +59,29 @@
 <body class="bg-gradient-success">
 
     <div class="container">
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
-            <div class="col-xl-10 col-lg-12 col-md-9">
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <!-- content card -->
-                        <div class="row text-center">
-                            <div class="col-lg-6 d-none d-lg-block bg-scan-image"></div>
-                            <div class="col-lg-6">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">SCAN ABSENSI</h1>
-                                        <h3>
-                                            <?= date('H:i:s') ?>
-                                        </h3>
-                                    </div>
-                                    <!-- view idcard -->
-                                    <div class="card bg-gradient-primary text-white shadow">
-                                        <div class="card-body">
-                                            <h3 class="mt-2">
-                                                john Doe
-                                            </h3>
-                                            <hr>
-                                            <h4>
-                                                Pulang
-                                            </h4>
-                                            <p>
-                                                Selamat Jalan
-                                            </p>
-                                            <p>
-                                                Masuk 07:34, Pulang 13:34
-                                            </p>
-                                            <p>
-                                                21-07-2023
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <!-- end view idcard -->
-                                    <hr>
-                                    <a href="<?= base_URL(); ?>" class="btn btn-link">Back to Dashboard</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end content card -->
-                    </div>
-                </div>
-            </div>
+        <div class="absensi">
         </div>
     </div>
 
+    <script>
+        function refreshDivContent() {
+            // Mendapatkan elemen div dengan kelas "absensi"
+            var divElement = document.querySelector('.absensi');
+            // Mengirim permintaan HTTP ke URL yang berisi data yang akan dimuat ulang
+            fetch('<?= base_url() ?>hasil') // Ganti 'data-url' dengan URL yang sesuai
+                .then(response => response.text())
+                .then(data => {
+                    // Mengganti konten elemen div dengan data yang baru
+                    divElement.innerHTML = data;
+                });
+
+            // Menjalankan fungsi ini setiap detik
+            setTimeout(refreshDivContent, 1000);
+        }
+
+        // Memulai pembaruan konten div setiap detik
+        refreshDivContent();
+    </script>
     <!-- Bootstrap core JavaScript-->
     <script src="<?= base_URL(); ?>assets/vendor/jquery/jquery.min.js"></script>
     <script src="<?= base_URL(); ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -110,9 +91,7 @@
 
     <!-- Custom scripts for all pages-->
     <script src="<?= base_URL(); ?>assets/js/sb-admin-2.min.js"></script>
-
-    <script src="<?= base_URL(); ?>assets/js/content.js"></script>
-
+    <script src="<?= base_url() ?>assets/js/content.js"></script>
 
 </body>
 

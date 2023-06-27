@@ -3,9 +3,11 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\AbsensiModel;
 
 class PagesController extends BaseController
 {
+
     public function index()
     {
         return view('public/cover');
@@ -16,6 +18,10 @@ class PagesController extends BaseController
     }
     public function hasilScan()
     {
-        return view('public/hasilScan');
+        $dataAbsen = new AbsensiModel();
+        $data = [
+            'absensi' => $dataAbsen->getLastAbsensi()
+        ];
+        return view('public/hasilScan', $data);
     }
 }
