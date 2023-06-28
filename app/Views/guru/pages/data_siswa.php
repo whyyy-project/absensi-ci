@@ -98,7 +98,7 @@
             <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Absensi Siswa</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Data Siswa</h6>
                     <div class="dropdown no-arrow">
                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
@@ -119,186 +119,185 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
+                                    <th>NIS</th>
+                                    <th>NISN</th>
                                     <th>Nama</th>
-                                    <th>Masuk</th>
-                                    <th>Pulang</th>
-                                    <th>Keterangan</th>
-                                    <th>Edith</th>
+                                    <th>Kelas</th>
+                                    <th>Edit</th>
                                 </tr>
                             </thead>
                             <tfoot>
                                 <tr>
                                 <th>No</th>
+                                    <th>NIS</th>
+                                    <th>NISN</th>
                                     <th>Nama</th>
-                                    <th>Masuk</th>
-                                    <th>Pulang</th>
-                                    <th>Keterangan</th>
+                                    <th>Kelas</th>
                                     <th>Edit</th>
                                 </tr>
                             </tfoot>
                             <tbody>
                             <tr>
     <td>1</td>
+    <td>0114246</td>
+    <td>0118741444</td>
     <td>Adi Sukmana</td>
-    <td>06:45</td>
-    <td>13:00</td>
-    <td>H</td>
+    <td>XII - IPA</td>
     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
 </tr>
 <tr>
     <td>2</td>
-    <td>Budi Prasetyo</td>
-    <td>08:30</td>
-    <td>15:45</td>
-    <td>I</td>
+    <td>0215324</td>
+    <td>0219823152</td>
+    <td>Budi Setiawan</td>
+    <td>XII - IPA</td>
     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
 </tr>
 <tr>
     <td>3</td>
-    <td>Citra Putri</td>
-    <td>09:15</td>
-    <td>16:30</td>
-    <td>S</td>
+    <td>0317821</td>
+    <td>0316519283</td>
+    <td>Citra Dewi</td>
+    <td>XII - IPA</td>
     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
 </tr>
 <tr>
     <td>4</td>
-    <td>Denny Gunawan</td>
-    <td>10:00</td>
-    <td>17:15</td>
-    <td>H</td>
+    <td>0419832</td>
+    <td>0419823232</td>
+    <td>Dewi Indah</td>
+    <td>XII - IPA</td>
     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
 </tr>
 <tr>
     <td>5</td>
-    <td>Eva Kusuma</td>
-    <td>11:30</td>
-    <td>18:45</td>
-    <td>I</td>
+    <td>0512381</td>
+    <td>0517328102</td>
+    <td>Eko Prasetyo</td>
+    <td>XII - IPA</td>
     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
 </tr>
 <tr>
     <td>6</td>
-    <td>Fajar Ramadhan</td>
-    <td>13:15</td>
-    <td>20:30</td>
-    <td>S</td>
+    <td>0612374</td>
+    <td>0619823674</td>
+    <td>Faisal Rahman</td>
+    <td>XII - IPA</td>
     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
 </tr>
 <tr>
     <td>7</td>
-    <td>Gita Permata</td>
-    <td>14:45</td>
-    <td>22:00</td>
-    <td>H</td>
+    <td>0716482</td>
+    <td>0715748291</td>
+    <td>Gita Wijaya</td>
+    <td>XII - IPA</td>
     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
 </tr>
 <tr>
     <td>8</td>
-    <td>Hendrianto</td>
-    <td>15:30</td>
-    <td>22:45</td>
-    <td>I</td>
+    <td>0819237</td>
+    <td>0816281937</td>
+    <td>Hendy Kurniawan</td>
+    <td>XII - IPA</td>
     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
 </tr>
 <tr>
     <td>9</td>
-    <td>Indah Wijaya</td>
-    <td>16:15</td>
-    <td>23:30</td>
-    <td>S</td>
+    <td>0913467</td>
+    <td>0918574321</td>
+    <td>Indra Permana</td>
+    <td>XII - IPA</td>
     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
 </tr>
 <tr>
     <td>10</td>
-    <td>Joko Santoso</td>
-    <td>17:45</td>
-    <td>01:00</td>
-    <td>H</td>
+    <td>1019823</td>
+    <td>1016519823</td>
+    <td>Joko Susanto</td>
+    <td>XII - IPA</td>
     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
 </tr>
 <tr>
     <td>11</td>
+    <td>1112378</td>
+    <td>1119823718</td>
     <td>Kartika Dewi</td>
-    <td>18:30</td>
-    <td>02:45</td>
-    <td>I</td>
+    <td>XII - IPA</td>
     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
 </tr>
 <tr>
     <td>12</td>
-    <td>Luthfi Rahman</td>
-    <td>19:15</td>
-    <td>03:30</td>
-    <td>S</td>
+    <td>1216372</td>
+    <td>1215321673</td>
+    <td>Lukman Hakim</td>
+    <td>XII - IPA</td>
     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
 </tr>
 <tr>
     <td>13</td>
-    <td>Maria Dewi</td>
-    <td>20:45</td>
-    <td>04:00</td>
-    <td>H</td>
+    <td>1319824</td>
+    <td>1317521984</td>
+    <td>Mira Susanti</td>
+    <td>XII - IPA</td>
     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
 </tr>
 <tr>
     <td>14</td>
-    <td>Nando Setiawan</td>
-    <td>21:30</td>
-    <td>05:45</td>
-    <td>I</td>
+    <td>1417423</td>
+    <td>1419823741</td>
+    <td>Nina Sari</td>
+    <td>XII - IPA</td>
     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
 </tr>
 <tr>
     <td>15</td>
-    <td>Opik Maulana</td>
-    <td>22:15</td>
-    <td>06:30</td>
-    <td>S</td>
+    <td>1519821</td>
+    <td>1516324982</td>
+    <td>Oscar Putra</td>
+    <td>XII - IPA</td>
     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
 </tr>
 <tr>
     <td>16</td>
-    <td>Puspita Sari</td>
-    <td>23:45</td>
-    <td>07:00</td>
-    <td>H</td>
+    <td>1615432</td>
+    <td>1618423192</td>
+    <td>Prita Wijaya</td>
+    <td>XII - IPA</td>
     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
 </tr>
 <tr>
     <td>17</td>
-    <td>Qori Ananda</td>
-    <td>00:30</td>
-    <td>08:45</td>
-    <td>I</td>
+    <td>1712381</td>
+    <td>1719823145</td>
+    <td>Qonita Pratiwi</td>
+    <td>XII - IPA</td>
     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
 </tr>
 <tr>
     <td>18</td>
-    <td>Ratna Putri</td>
-    <td>01:15</td>
-    <td>09:30</td>
-    <td>S</td>
+    <td>1819462</td>
+    <td>1817328162</td>
+    <td>Randy Setiawan</td>
+    <td>XII - IPA</td>
     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
 </tr>
 <tr>
     <td>19</td>
-    <td>Surya Wijaya</td>
-    <td>02:45</td>
-    <td>10:00</td>
-    <td>H</td>
+    <td>1912378</td>
+    <td>1919823712</td>
+    <td>Sarah Amelia</td>
+    <td>XII - IPA</td>
     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
 </tr>
 <tr>
     <td>20</td>
-    <td>Tuti Mulyani</td>
-    <td>03:30</td>
-    <td>11:45</td>
-    <td>I</td>
+    <td>2017423</td>
+    <td>2019823741</td>
+    <td>Tono Susanto</td>
+    <td>XII - IPA</td>
     <td><button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></td>
 </tr>
 
-                                
                             </tbody>
                         </table>
                     </div>
