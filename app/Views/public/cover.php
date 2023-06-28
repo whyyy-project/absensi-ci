@@ -330,170 +330,21 @@
 
     <!-- end about section -->
 
-    <!-- trending section -->
-
-    <section class="trending_section layout_padding">
-        <div id="accordion">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="detail-box">
-                            <div class="heading_container">
-                                <h2>
-                                    Sering Terlambat Bulan ini
-                                </h2>
-                            </div>
-                            <div class="tab_container">
-                                <div class="t-link-box" data-toggle="collapse" data-target="#collapseOne"
-                                    aria-expanded="true" aria-controls="collapseOne">
-                                    <div class="number">
-                                        <h5>
-                                            01
-                                        </h5>
-                                    </div>
-                                    <hr>
-                                    <div class="t-name">
-                                        <h5>
-                                            Yoga
-                                        </h5>
-                                    </div>
-                                </div>
-                                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                                    aria-expanded="false" aria-controls="collapseTwo">
-                                    <div class="number">
-                                        <h5>
-                                            02
-                                        </h5>
-                                    </div>
-                                    <hr>
-                                    <div class="t-name">
-                                        <h5>
-                                            Rina
-                                        </h5>
-                                    </div>
-                                </div>
-                                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseThree"
-                                    aria-expanded="false" aria-controls="collapseThree">
-                                    <div class="number">
-                                        <h5>
-                                            03
-                                        </h5>
-                                    </div>
-                                    <hr>
-                                    <div class="t-name">
-                                        <h5>
-                                            Yogi
-                                        </h5>
-                                    </div>
-                                </div>
-                                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseFour"
-                                    aria-expanded="false" aria-controls="collapseFour">
-                                    <div class="number">
-                                        <h5>
-                                            04
-                                        </h5>
-                                    </div>
-                                    <hr>
-                                    <div class="t-name">
-                                        <h5>
-                                            Rani
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="collapse show" id="collapseOne" aria-labelledby="headingOne"
-                            data-parent="#accordion">
-                            <div class="img_container ">
-                                <div class="box b-1">
-                                    <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>assets/images/telat1.jpg"
-                                            style="width: 300px; " alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordion">
-                            <div class="img_container ">
-                                <div class="box b-1">
-                                    <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>assets/images/telat2.jpg"
-                                            style="width: 300px;" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="collapse" id="collapseThree" aria-labelledby="headingThree"
-                            data-parent="#accordion">
-                            <div class="img_container ">
-                                <div class="box b-1">
-                                    <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>assets/images/telat3.jpg"
-                                            style="width: 300px;" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="collapse" id="collapseFour" aria-labelledby="headingfour" data-parent="#accordion">
-                            <div class="img_container ">
-                                <div class="box b-1">
-                                    <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>assets/images/telat4.jpg"
-                                            style="width: 300px;" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- end trending section -->
-
     <!-- contact section -->
 
     <section class="contact_section layout_padding">
         <div class="container ">
             <div class="heading_container">
                 <h2 class="">
-                    Hubungi Kami
+                    Lokasi Kami
                 </h2>
             </div>
-
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                <form method="post" action="proses_form.php">
-                <!-- Isi form di sini -->
-                    <div>
-                        <input type="text" placeholder="Nama" name="nama" required />
-                    </div>
-                    <div>
-                        <input type="email" placeholder="Email" name="email" required />
-                    </div>
-                    <div>
-                        <input type="text" placeholder="No Telepon" name="no_telepon" required />
-                    </div>
-                    <div>
-                        <input type="text" class="message-box" placeholder="Tulis Pesan" />
-                    </div>
-                    <div class="d-flex">
-                        <button type="submit" name="submit">KIRIM</button>
-                    </div>
-            </form>
-                </div>
-                <div class="col-md-6">
+        <div class="container" style="text-align :center">
+                <div class="col-md-12">
                     <div class="map_container">
                         <div class="map-responsive">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.8291865534916!2d111.92140207424845!3d-7.260272271328159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e782b12c820314d%3A0x9ed7d5c71ba0009e!2sMA%20Al-Abror%20Sukosewu!5e0!3m2!1sid!2sid!4v1687599301770!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7915.658272278782!2d111.923977!3d-7.2602780000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e782b12c820314d%3A0x9ed7d5c71ba0009e!2sMA%20Al-Abror%20Sukosewu!5e0!3m2!1sid!2sid!4v1687909255238!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                        </div>
                     </div>
                 </div>
             </div>

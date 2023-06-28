@@ -728,15 +728,14 @@ a:focus {
 
 .contact_section {
   position: relative;
+  background-color: whitesmoke;
 }
 
 .contact_section .design-box {
   position: absolute;
-  bottom: 50%;
   -webkit-transform: translateY(50%);
   transform: translateY(50%);
   right: 0;
-  width: 75px;
 }
 
 .contact_section .design-box img {
@@ -764,38 +763,17 @@ a:focus {
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16);
 }
 
-.contact_section input::-webkit-input-placeholder {
-  color: #131313;
-}
-
-.contact_section input:-ms-input-placeholder {
-  color: #131313;
-}
-
-.contact_section input::-ms-input-placeholder {
-  color: #131313;
-}
-
-.contact_section input::placeholder {
-  color: #131313;
-}
-
-.contact_section input.message-box {
-  height: 120px;
-}
-
 .contact_section button {
   display: inline-block;
   padding: 12px 45px;
   background-color: #24d278;
-  color: #ffffff;
+  color: #000000;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: 1px solid transparent;
   border-radius: 30px;
   border-radius: 30px;
   color: #fff;
-  margin-top: 35px;
 }
 
 .contact_section button:hover {
@@ -805,13 +783,10 @@ a:focus {
 }
 
 .contact_section .map_container {
-  height: 100%;
-  padding-bottom: 110px;
 
 }
 
 .contact_section .map_container .map-responsive {
-  height: 100%;
 
 }
 
