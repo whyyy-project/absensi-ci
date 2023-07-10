@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class ApiKeyModel extends Model
 {
-    protected $table = 'api_keys';
-    protected $primaryKey = 'id_key';
-    protected $allowedFields = ['api_key', 'created_at'];
+    protected $table = 'data_api_keys';
+    protected $primaryKey = 'id';
+    protected $allowedFields = ['api', 'created_at'];
 }

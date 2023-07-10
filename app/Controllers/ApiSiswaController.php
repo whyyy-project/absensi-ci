@@ -20,7 +20,7 @@ class ApiSiswaController extends ResourceController
             'message' => 'API Key Salah!'
         ];
 
-        if ($this->validateApiKey($apiKey)) {
+        if ($this->validateApiKey($apiKey, 'getData')) {
             $model = new ApiModel();
             $siswaData = $model->getSiswaData();
 
@@ -34,13 +34,13 @@ class ApiSiswaController extends ResourceController
         }
     }
 
-    private function validateApiKey($apiKey)
+    private function validateApiKey($apiKey, $type)
     {
         // Validasi API Key di sini
         // Misalnya, menggunakan model ApiKeyModel untuk memeriksa keberadaan API Key
         // Sesuaikan dengan logika validasi API Key yang Anda miliki
         $apiKeyModel = new \App\Models\ApiKeyModel();
-        $keyExists = $apiKeyModel->where('api_key', $apiKey)->first();
+        $keyExists = $apiKeyModel->where('api', $apiKey && 'type', $type);
 
         return $keyExists !== null;
     }
