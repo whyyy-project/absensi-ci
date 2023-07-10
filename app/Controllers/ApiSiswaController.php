@@ -20,7 +20,7 @@ class ApiSiswaController extends ResourceController
             'message' => 'API Key Salah!'
         ];
 
-        if ($this->validateApiKey($apiKey, 'getData')) {
+        if ($this->validateApiKey($apiKey, 'getAllDataSiswa')) {
             $model = new ApiModel();
             $siswaData = $model->getSiswaData();
 

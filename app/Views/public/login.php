@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-success">
 
     <div class="container">
 
@@ -37,7 +37,7 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4"><?= lang('Auth.loginTitle') ?></h1>
+                                        <h1 class="h4 text-gray-900 mb-2"><?= lang('Auth.loginTitle') ?></h1>
                                     </div>
 
 
@@ -79,7 +79,6 @@
                                             </div>
                                         <?php endif; ?>
 
-                                        <hr>
                                         <button type="submit" class="btn btn-primary btn-user btn-block"><?= lang('Auth.loginAction') ?></button>
                                         <hr>
                                     </form>
@@ -93,6 +92,9 @@
                                             <p><a class="small" href="<?= url_to('forgot') ?>"><?= lang('Auth.forgotYourPassword') ?></a></p>
                                         </div>
                                     <?php endif; ?>
+                                    <div class="text-center mt-3">
+                                        <a class="small btn btn-link" href="<?= base_URL(); ?>">Back to Dashboard</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

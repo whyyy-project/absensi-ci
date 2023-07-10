@@ -59,7 +59,28 @@
 <body class="bg-gradient-success">
 
     <div class="container">
-        <div class="absensi">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12 col-md-9">
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- content card -->
+                        <div class="row text-center">
+                            <div class="col-lg-6 d-none d-lg-block bg-scan-image"></div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="absensi">
+                                    </div>
+                                    <hr>
+                                    <a href="<?= base_URL(); ?>" class="btn btn-link">Back to Dashboard</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end content card -->
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -74,13 +95,8 @@
                     // Mengganti konten elemen div dengan data yang baru
                     divElement.innerHTML = data;
                 });
-
-            // Menjalankan fungsi ini setiap detik
-            setTimeout(refreshDivContent, 1000);
         }
-
-        // Memulai pembaruan konten div setiap detik
-        refreshDivContent();
+        setInterval(refreshDivContent, 10);
     </script>
     <!-- Bootstrap core JavaScript-->
     <script src="<?= base_URL(); ?>assets/vendor/jquery/jquery.min.js"></script>
