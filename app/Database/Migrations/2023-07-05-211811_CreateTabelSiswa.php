@@ -88,7 +88,6 @@ class CreateTabelSiswa extends Migration
         ]);
 
         $this->forge->addKey('id', true);
-        $this->forge->addUniqueKey('uuid');
         $this->forge->addForeignKey('id_kelas', 'data_kelas', 'id', 'CASCADE', 'CASCADE');
         $this->forge->createTable('data_siswa');
     }
