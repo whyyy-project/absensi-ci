@@ -54,6 +54,7 @@ $routes->get('/data_siswa', 'AdminController::data_siswa');
 
 // API
 $routes->get('api/siswa/(:segment)', 'ApiSiswaController::data_siswa/$1');
+$routes->get('api/absensi', 'ApiSiswaController::addData');
 
 
 

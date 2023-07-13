@@ -5,27 +5,35 @@
     </h3>
 </div>
 <!-- view idcard -->
-<div class="card bg-gradient-primary text-white shadow">
-    <div class="card-body">
-        <h3 class="mt-2">
-            john Doe
-        </h3>
-        <hr>
-        <h4>
-            Pulang
-        </h4>
-        <p>
-            Selamat Jalan
-        </p>
-        <p>
-            Masuk 06:34, Pulang 13:34
-        </p>
-        <p>
-            21-07-2023
-        </p>
-    </div>
-</div>
 <?php foreach ($absensi as $ab) : ?>
-    <?= $ab['nama'] ?>
+    <?php
+    $masuk = date("His", strtotime($ab['masuk']));
+    if ($masuk > 070000) {
+        $bg = "danger";
+    } else {
+        $bg = "primary";
+    }
+    ?>
+    <div class="card bg-gradient-<?= $bg ?> text-white shadow">
+        <div class="card-body">
+            <h3 class="mt-2">
+                <?= $ab['nama'] ?>
+            </h3>
+            <hr>
+            <h4>
+                <?= $ab['status_absen'] ?>
+            </h4>
+            <p>
+                <?= $ab['keterangan'] ?>
+            </p>
+            <p>
+                Masuk <?= $ab['masuk'] ?>, Pulang <?= $ab['pulang'] ?>
+            </p>
+            <p>
+                <?= $ab['tanggal'] ?>
+            </p>
+        </div>
+    </div>
 <?php endforeach; ?>
+
 <!-- end view idcard -->

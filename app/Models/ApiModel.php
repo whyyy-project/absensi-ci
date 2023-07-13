@@ -12,7 +12,7 @@ class ApiModel extends Model
 
     public function getSiswaData()
     {
-        return $this->select('tb_siswa.uuid')
+        return $this->select('uuid')
             ->where('status', 'Aktif')
             ->findAll();
     }
