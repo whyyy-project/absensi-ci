@@ -318,7 +318,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="img-box">
-                        <img loading="lazy" src="<?= base_URL(); ?>images/cover/tentang.jpeg" alt="">
+                        <img loading="lazy" src="public/images/cover/tentang.jpeg" alt="">
                     </div>
                 </div>
             </div>
