@@ -3,10 +3,14 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use App\Models\AbsensiModel;
+use App\Models\RfidModel;
 
 class PagesController extends BaseController
 {
+    public function __construct()
+    {
+        $this->dataAbsen = new RfidModel();
+    }
 
     public function index()
     {
@@ -18,9 +22,8 @@ class PagesController extends BaseController
     }
     public function hasilScan()
     {
-        $dataAbsen = new AbsensiModel();
         $data = [
-            'absensi' => $dataAbsen->getLastAbsensi()
+            'absensi' => $this->dataAbsen->getLastAbsensi()
         ];
         return view('public/hasilScan', $data);
     }

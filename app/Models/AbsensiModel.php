@@ -18,7 +18,13 @@ class AbsensiModel extends Model
 
     public function getLastAbsensi()
     {
-        return $this->orderBy('id', 'desc')
+        return $this->db
+            ->table('data_siswa', 'data_temporary_rfid')
+            ->select('data_siswa.nama, data_kelas.kelas, data_absensi.tanggal, data_absensi.masuk, data_absensi.pulang, data_absensi.status_absen')
+            ->from('data_absensi')
+            ->join('data_siswa', 'data_siswa.id = data_absensi.id_siswa', 'left')
+            ->join('data_temporary_rfid.rfid = data_siswa.uuid', 'left')
+            ->orderBy('data_tempopary_rfid.id', 'DESC')
             ->limit(1);
     }
 }

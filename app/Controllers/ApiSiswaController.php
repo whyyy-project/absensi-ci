@@ -13,6 +13,10 @@ class ApiSiswaController extends ResourceController
 
     protected $modelName = 'App\Models\ApiModel';
     protected $format = 'json';
+    public function __construct()
+    {
+        $this->api = new ApiModel();
+    }
 
     public function data_siswa($apiKey = null)
     {
@@ -20,7 +24,7 @@ class ApiSiswaController extends ResourceController
             'message' => 'API Key Salah!'
         ];
 
-        if ($this->validateApiKey($apiKey, 'getData')) {
+        if ($this->validateApiKey($apiKey, 'getAllDataSiswa')) {
             $model = new ApiModel();
             $siswaData = $model->getSiswaData();
 
@@ -32,6 +36,33 @@ class ApiSiswaController extends ResourceController
         } else {
             return view('errors/html/error_404', $data);
         }
+    }
+    public function addData()
+    {
+        // Mengambil data dari parameter GET
+        $uuid = $this->request->getGet('uuid');
+
+        // Validasi data
+        if (empty($uuid)) {
+            return $this->fail('UUID kosong');
+        }
+        // validasi apakah uuid ada
+        $uuidExists = false;
+        $dataUuid = $this->api->getSiswaData();
+        foreach ($dataUuid as $d) {
+            if ($d['uuid'] == $uuid) {
+                $uuidExists = true;
+            }
+        }
+        if (!$uuidExists) {
+            return $this->fail('UUID tidak valid');
+        }
+
+        $data = [
+            'uuid' => $uuid,
+        ];
+
+        return $this->respond($data, 201);
     }
 
     private function validateApiKey($apiKey, $type)
